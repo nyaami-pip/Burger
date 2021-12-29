@@ -1,0 +1,60 @@
+version: "3.7"
+services:
+  mysql:
+    image: ${IMAGE_MYSQL}
+    environment:
+      MYSQL_USER: ${DB_USER}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+    ports:
+      - "${PORT_DB}:${PORT_DB}"
+    volumes:
+      - mysqldata:/var/lib/mysql
+    networks:
+      - default
+    restart: always
+  nest:
+    # image: ${IMAGE_NEST}
+    build:
+      context: ./burger-backend
+      dockerfile: Dockerfile
+    environment:
+      PORT: ${PORT_NEST}
+      # Enable if want local database
+      # MYSQL_USER: ${DB_USER}
+      # MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      # MYSQL_PORT: ${MYSQL_PORT}
+      # MYSQL_DATABASE: ${DB_NAME}
+      # Enable if want dedicated database
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_PORT: ${MYSQL_PORT}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+    ports:
+      - ${PORT_NEST}:${PORT_NEST}
+    depends_on:
+      - mysql
+    links:
+      - mysql:mysql
+    networks:
+      - default
+    restart: always
+    command: npm run start:dev
+  react:
+    # image: ${IMAGE_REACT}
+    build:
+      context: ./burger-frontend
+      dockerfile: Dockerfile
+    environment:
+      REACT_APP_BACKEND_URL: ${REACT_APP_BACKEND_URL}
+    ports:
+      - ${PORT_REACT}:${PORT_REACT}
+    depends_on:
+      - mysql
+      - nest
+    networks:
+      - default
+    restart: always
+    command: npm run start
+volumes:
+  mysqldata:

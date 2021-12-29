@@ -1,0 +1,56 @@
+.header {
+  position: fixed;
+
+  display: flex;
+  align-items: center;
+
+  background: var(--header-bg-color);
+
+  width: 100%;
+  height: var(--header-height);
+  border-bottom: 3px solid var(--header-border-color);
+
+  z-index: 10;
+}
+
+.header-nav {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+
+  .isAdmin {
+    > * {
+      color: rgb(216, 166, 40);
+    }
+  }
+
+  :last-child {
+    margin-left: auto;
+  }
+}
+
+.header-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  white-space: nowrap;
+
+  height: 100%;
+
+  font-weight: 500;
+  padding: 0 15px;
+
+  > * {
+    text-decoration: none;
+    color: var(--header-color);
+
+    &:hover {
+      color: var(--header-color-hover);
+      transition: all 0.2s ease-in;
+    }
+    transition: all 0.2s ease-out;
+  }
+}

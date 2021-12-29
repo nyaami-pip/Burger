@@ -1,0 +1,84 @@
+@use 'styles/media';
+
+body {
+  background-attachment: fixed;
+  background-position: top center;
+  background-size: cover;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: var(--background-color);
+}
+
+:root {
+  --font-code: Monaco, Menlo, Consolas, Ubuntu Mono, Courier New, monospace;
+  --font-alt-hadline-letter-spacing: 0.18px;
+  --font-family-base: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+  --header-bg-color: #212529;
+  --header-color: #e2e2e2;
+  --header-color-hover: #ff5c57;
+  --header-border-color: #ff5c57;
+  --header-height: 45px;
+
+  --home-color: #ff6c67;
+
+  --color-hr: #c7c7c7;
+
+  --aside-width: 340px;
+  --aside-bg-color: #e6e6e6;
+
+  --footer-bg-color: #0f1011;
+  --footer-height: 40px;
+
+  --color-sub-text: #2e2e2e;
+  --color-text: #272727;
+
+  --submit-bg-color: #0ead78;
+  --submit-bg-color-hover: #00c382;
+
+  --color-link: rgb(0, 153, 255);
+  --color-link-hover: rgb(0, 195, 255);
+
+  --color-bg-is-taked: #ff6e41;
+  --color-bg-is-select: #5ae6ff;
+
+  --background-color: rgb(235, 235, 235); // rgba(31, 31, 31);
+  --background-content: #cacaca; //rgba(19, 20, 21, 0.9);
+  --background-color-highlight: #141516; //rgba(26, 26, 26);
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+// body *::selection {
+//   color: var(--font-color-main-lighter); /* Цвет текста */
+//   background: var(--background-color-lighter); /* Цвет фона */
+// }
+
+// Scrollbar color
+::-webkit-scrollbar {
+  width: 5px;
+  height: 100%;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #c1c1c1;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  // background-image: linear-gradient(135deg, #8bc6ec 0%, #9599e2 100%);
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 1px rgba(0, 0, 0, 0);
+  border-radius: 10px;
+  background-color: transparent;
+}

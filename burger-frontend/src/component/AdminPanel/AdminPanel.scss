@@ -1,0 +1,22 @@
+.admin-panel {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-panel-header {
+  padding: 50px 0;
+  h1 {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+}
+
+.admin-panel-content {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}

@@ -1,0 +1,78 @@
+.assortment {
+  width: 100%;
+  height: 100%;
+
+  padding-right: 0;
+
+  max-width: 1200px;
+
+  &.active {
+    padding-right: calc(var(--aside-width) + 15px);
+    transition: all 0.2s ease-in;
+  }
+  transition: all 0.2s ease-out;
+}
+
+header {
+  &.top {
+    background: url('../../assets/image/burger-logo-4.jpg') center no-repeat;
+    background-size: cover;
+    color: #fff;
+    border-radius: 0px 0px 25px 25px;
+
+    .wrap {
+      height: 100%;
+      background-image: linear-gradient(to bottom, rgba(61, 26, 22, 0), rgba(61, 26, 22, 0.6));
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+      border-radius: 0px 0px 25px 25px;
+
+      .header-content {
+        padding: 4rem 0;
+        margin: 0 4rem;
+
+        .header-rating {
+          padding: 4px 8px;
+          background-color: #ffe033a4;
+          box-shadow: 0 0 10px #ffe033;
+          display: inline-flex;
+          border-radius: 18px;
+          align-items: center;
+          font-size: 1.4rem;
+          max-width: 500px;
+
+          .header-rating_tag {
+            color: #000;
+            margin-right: 5px;
+          }
+
+          .header-divider {
+            height: 1px;
+            opacity: 0.2;
+            margin-top: 20px;
+            margin-bottom: 8px;
+            background-color: #ffffff;
+          }
+          h1 {
+            font-size: 3.4rem;
+          }
+          h3 {
+            margin: 0;
+            font-size: 2rem;
+          }
+          .sub-header {
+            color: #ff0000;
+          }
+        }
+      }
+    }
+  }
+}
+
+.assortment-burgers {
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}

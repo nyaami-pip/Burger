@@ -1,0 +1,118 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Restaurant {
+  id: Int!
+  url: String!
+  title: String!
+}
+
+type Burger {
+  id: Int!
+  restaurantId: Int!
+  img: String!
+  name: String!
+  desc: String!
+  price: Float!
+  status: Float!
+}
+
+type OrderDetail {
+  id: Int!
+  orderId: Int!
+  burgerId: Int!
+  count: Int!
+}
+
+type Order {
+  id: Int!
+  userId: Int!
+  restaurantId: Int!
+  dateAdd: DateTime!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type User {
+  id: Int!
+  login: String!
+  password: String!
+  dateReg: DateTime!
+  lastLogin: DateTime!
+  role: String!
+}
+
+type UserToken {
+  token: String!
+  user: User!
+}
+
+type Query {
+  users: [User!]!
+  findOne(id: Int!): User!
+  restaurants: [Restaurant!]!
+  burgers(url: String!): [Burger!]!
+  orders(url: String!): [Order!]!
+}
+
+type Mutation {
+  createUser(createUserInput: CreateUserInput!): User!
+  signIn(input: AuthSignInInput!): UserToken!
+  signUp(input: AuthSignUpInput!): UserToken!
+  auth: UserToken!
+  createBurger(createBurgerInput: CreateBurgerInput!): Burger!
+  updateBurger(updateBurgerInput: UpdateBurgerInput!): Burger!
+  removeBurger(id: Int!): [Burger!]!
+  createOrder(input: CreateOrderInput!): Order!
+  createOrderDetail(input: CreateOrderDetailInput!): OrderDetail!
+}
+
+input CreateUserInput {
+  login: String!
+  password: String!
+}
+
+input AuthSignInInput {
+  login: String!
+  password: String!
+}
+
+input AuthSignUpInput {
+  login: String!
+  password: String!
+  rePassword: String!
+}
+
+input CreateBurgerInput {
+  img: String!
+  name: String!
+  desc: String!
+  price: Int!
+  status: Int!
+  restaurantId: Int!
+}
+
+input UpdateBurgerInput {
+  img: String
+  name: String
+  desc: String
+  price: Int
+  status: Int
+  restaurantId: Int
+  id: Int!
+}
+
+input CreateOrderInput {
+  userId: Int!
+  restaurantId: Int!
+}
+
+input CreateOrderDetailInput {
+  orderId: Int!
+  burgerId: Int!
+  count: Int!
+}

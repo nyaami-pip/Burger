@@ -1,0 +1,32 @@
+// .burger-edit
+//   margin-bottom 20px
+//   border 2px solid black
+//   overflow hidden
+//   display flex
+//   flex-wrap wrap
+//   max-width: 450px;
+//   input, textarea, select
+//     width 50%
+//     padding 10px
+//     line-height 1
+//     font-size 1.2rem
+//     border 0
+//     border-bottom 1px solid black
+//     border-right 1px solid black
+//     appearance none
+//     border-radius 0
+//     background white
+//     &:focus
+//       outline 0
+//       background lighten(orange, 85%)
+//   textarea
+//     width 100%
+//     min-height 60px
+//   input:last-of-type
+//     width 100%
+//   button
+//     width 100%
+//     border 0
+//     font-size 1.2rem
+//   .status
+//     width: 100%

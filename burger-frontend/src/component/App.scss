@@ -1,0 +1,23 @@
+.page {
+  position: relative;
+  min-height: 100vh;
+  // min-height: calc(100vh - var(--footer-height));
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  > * {
+    padding-top: var(--header-height);
+  }
+}
+
+html {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+}

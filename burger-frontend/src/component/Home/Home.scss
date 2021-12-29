@@ -1,0 +1,43 @@
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.home-content {
+}
+
+.home-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:nth-child(odd) {
+    margin-left: 150px;
+  }
+  &:nth-child(even) {
+    margin-right: 150px;
+  }
+
+  transform-origin: 0 0;
+
+  &:hover {
+    transform: scale(1.05);
+    transition: all 0.2s ease-in;
+  }
+  transition: all 0.2s ease-in;
+}
+
+.home-icon {
+  width: 280px;
+  height: 280px;
+
+  fill: var(--home-color);
+}
+
+.home-title {
+  position: absolute;
+  font-size: 1.15rem;
+}

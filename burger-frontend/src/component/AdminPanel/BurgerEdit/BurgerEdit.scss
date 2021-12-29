@@ -1,0 +1,131 @@
+.burger-edit {
+  width: 100%;
+  height: 100%;
+
+  max-width: 1200px;
+
+  padding-bottom: 80px;
+}
+
+.burger-edit-hr {
+  margin: 0 auto;
+  height: 1px;
+  width: 90%;
+  background-color: var(--color-hr);
+}
+
+.burger-edit-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  gap: 35px;
+}
+
+.burger-edit-form {
+  padding: 20px;
+  border: 2px dashed rgb(170, 170, 170);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: 100%;
+
+  div {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+.burger-edit-image {
+  height: 100%;
+  border: 2px dashed rgb(170, 170, 170);
+  border-radius: 10px;
+
+  padding: 10px;
+
+  img {
+    width: 180px;
+    height: 180px;
+
+    object-fit: cover;
+  }
+}
+
+.burger-edit-submit {
+  display: flex;
+  flex-direction: row;
+  padding: 0 25px;
+
+  &__buttons {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+      cursor: pointer;
+    }
+
+    .submit-update {
+      background-color: rgb(128, 236, 143);
+      padding: 5px 10px;
+      border-radius: 10px;
+    }
+
+    .submit-remove {
+      background-color: rgb(255, 136, 116);
+      padding: 5px 10px;
+      border-radius: 10px;
+    }
+  }
+}
+
+// .burger-edit {
+//   margin-bottom: 20px;
+//   border: 2px solid black;
+//   overflow: hidden;
+//   display: flex;
+//   flex-wrap: wrap;
+//   max-width: 450px;
+
+//   input,
+//   textarea,
+//   select {
+//     width: 50%;
+//     padding: 10px;
+//     line-height: 1;
+//     font-size: 1.2rem;
+//     border: 0;
+//     border-bottom: 1px solid black;
+//     border-right: 1px solid black;
+//     appearance: none;
+//     border-radius: 0;
+//     background: white;
+
+//     &:focus {
+//       outline: 0;
+//       background: rgba(255, 166, 0, 0.335);
+//     }
+//   }
+
+//   textarea {
+//     width: 100%;
+//     min-height: 60px;
+//   }
+
+//   input:last-of-type {
+//     width: 100%;
+//   }
+//   button {
+//     width: 100%;
+//     border: 0;
+//     font-size: 1.2rem;
+//   }
+
+//   .status {
+//     width: 100%;
+//   }
+// }
